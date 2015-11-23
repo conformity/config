@@ -1,4 +1,4 @@
-# config
+# Config
 A Config Implementation of our config PSR recommendation, inspired by mrjgreen/config
 
 References:
@@ -6,6 +6,8 @@ References:
 https://github.com/mrjgreen/config
 
 https://github.com/conformity/config-recommendation
+
+This package conforms the recommendations set out the above package and implements the ```ConformityRecommendation\Config\RepositoryInterface```
 
 Example file structure:
 

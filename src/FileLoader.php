@@ -1,4 +1,4 @@
-<?php namespace Conformity\Config;
+<?php namespace Ecfectus\Config;
 
 class FileLoader implements LoaderInterface
 {

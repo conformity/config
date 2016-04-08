@@ -5,9 +5,9 @@ References:
 
 https://github.com/mrjgreen/config
 
-https://github.com/conformity/config-recommendation
+https://github.com/ecfectus/config-recommendation
 
-This package conforms the recommendations set out the above package and implements the ```ConformityRecommendation\Config\RepositoryInterface```
+This package conforms the recommendations set out the above package and implements the ```EcfectusRecommendation\Config\RepositoryInterface```
 
 Example file structure:
 
@@ -35,7 +35,7 @@ Example usage
 ```php
 $environment = '';
 
-$config = new Conformity\Config\Repository(new Conformity\Config\FileLoader(__DIR__ . '/config'), $environment);
+$config = new Ecfectus\Config\Repository(new Ecfectus\Config\FileLoader(__DIR__ . '/config'), $environment);
 
 var_dump($config['database']);
 /*
@@ -49,7 +49,7 @@ array(
 
 $environment = 'production.server1';
 
-$config = new Conformity\Config\Repository(new Conformity\Config\FileLoader(__DIR__ . '/config'), $environment);
+$config = new Ecfectus\Config\Repository(new Ecfectus\Config\FileLoader(__DIR__ . '/config'), $environment);
 
 var_dump($config['database']);
 /*

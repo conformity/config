@@ -1,9 +1,8 @@
-<?php namespace Conformity\Config;
+<?php namespace Ecfectus\Config;
 
 use ArrayAccess;
-use ConformityRecommendation\Config\ConfigRepositoryInterface;
 
-class Repository implements ArrayAccess, ConfigRepositoryInterface
+class Repository implements ArrayAccess, RepositoryInterface
 {
     /**
      * The loader implementation.

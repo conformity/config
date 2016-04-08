@@ -1,4 +1,4 @@
-<?php namespace Conformity\Config;
+<?php namespace Ecfectus\Config;
 
 interface LoaderInterface
 {

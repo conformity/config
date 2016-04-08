@@ -1,7 +1,7 @@
 <?php
-namespace Conformity\Config\Test;
+namespace Ecfectus\Config\Test;
 
-use Conformity\Config\FileLoader;
+use Ecfectus\Config\FileLoader;
 
 class FileLoaderTest extends \PHPUnit_Framework_TestCase
 {

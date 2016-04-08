@@ -1,8 +1,8 @@
 <?php
-namespace Conformity\Config\Test;
+namespace Ecfectus\Config\Test;
 
-use Conformity\Config\Repository;
-use Conformity\Config\FileLoader;
+use Ecfectus\Config\Repository;
+use Ecfectus\Config\FileLoader;
 
 class RepositoryTest extends \PHPUnit_Framework_TestCase
 {

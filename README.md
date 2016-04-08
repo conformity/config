@@ -1,13 +1,11 @@
 # Config
-A Config Implementation of our config PSR recommendation, inspired by mrjgreen/config
+A Config Implementation inspired by mrjgreen/config
 
 References:
 
 https://github.com/mrjgreen/config
 
 https://github.com/ecfectus/config-recommendation
-
-This package conforms the recommendations set out the above package and implements the ```EcfectusRecommendation\Config\RepositoryInterface```
 
 Example file structure:
 

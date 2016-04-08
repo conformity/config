@@ -1,8 +1,9 @@
 <?php namespace Ecfectus\Config;
 
 use ArrayAccess;
+use JsonSerializable;
 
-class Repository implements ArrayAccess, RepositoryInterface
+class Repository implements ArrayAccess, JsonSerializable, RepositoryInterface
 {
     /**
      * The loader implementation.
@@ -107,11 +108,11 @@ class Repository implements ArrayAccess, RepositoryInterface
     protected function load($group)
     {
         // If we've already loaded this collection, we will just bail out since we do
-            // not want to load it again. Once items are loaded a first time they will
-            // stay kept in memory within this class and not loaded from disk again.
-            if (isset($this->items[$group])) {
-                return;
-            }
+        // not want to load it again. Once items are loaded a first time they will
+        // stay kept in memory within this class and not loaded from disk again.
+        if (isset($this->items[$group])) {
+            return;
+        }
 
         $loaded = $this->loader->load($this->environment, $group);
 
@@ -246,6 +247,16 @@ class Repository implements ArrayAccess, RepositoryInterface
     }
 
     /**
+     * Set all of the configuration items.
+     * Usefull when compiling a cached config.
+     *
+     */
+    public function setItems()
+    {
+        return $this->items;
+    }
+
+    /**
      * Determine if the given configuration option exists.
      *
      * @param  string  $key
@@ -288,5 +299,14 @@ class Repository implements ArrayAccess, RepositoryInterface
     public function offsetUnset($key)
     {
         $this->set($key, null);
+    }
+
+    /**
+     * Return the items for json serialization.
+     *
+     * @return array
+     */
+    public function jsonSerialize(){
+        return $this->items;
     }
 }

@@ -69,7 +69,7 @@ class FileLoader implements LoaderInterface
      */
     protected function parseEnvironment($environment)
     {
-        $environments = array_filter(preg_split('/(\/|\.)/', $environment));
+        $environments = array_filter(explode('.', $environment));
 
         array_unshift($environments, '');
 
